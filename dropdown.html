@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dropdown</title>
+    <style>
+        nav {
+            background-color: rgb(190, 181, 181);
+            width: 90px;
+            height: 30px;
+            padding-top: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-radius: 5px;  
+            color: rgb(59, 57, 57);      
+        }
+       
+        nav label {
+            cursor: pointer;
+            user-select: none;
+            
+        }
+        nav label::after {
+            content: "▼";
+        }
+        nav ul {
+            display: none;
+            background-color: rgb(220, 212, 212);
+            list-style: none;
+            text-indent: 8px;
+            padding-left: 16px;
+            padding-top: 8px;
+            margin-top: 11px;
+            width: 75px;
+        }
+
+        nav ul li a {
+            display: block;
+            text-decoration: none;
+            color: rgb(59, 57, 57);
+            height: 30px;
+        }
+        nav input:checked+label+ul {
+            display: block;
+        }
+        nav input {
+            display: none;
+        }
+        nav input:checked+label::after {
+            content: "▲";
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <input type="checkbox" id="toggler"/>
+        <label for="toggler">
+            Dropdown   
+        </label>
+        <ul>
+            <li><a href="">Item 1</a></li>
+            <li><a href="">Item 2</a></li>
+            <li><a href="">Item 3</a></li>
+        </ul>
+    </nav>
+    
+</body>
+</html>
